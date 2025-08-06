@@ -5,7 +5,7 @@
 [![Tests](https://github.com/Sleppy-Technologies/django-plugin-extensions/workflows/Test/badge.svg)](https://github.com/Sleppy-Technologies/django-plugin-extensions/actions?query=workflow%3ATest)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/Sleppy-Technologies/django-plugin-extensions/blob/main/LICENSE)
 
-{{ cookiecutter.description or "" }}
+Django plugin wrapping django-extensions
 
 ## Installation
 

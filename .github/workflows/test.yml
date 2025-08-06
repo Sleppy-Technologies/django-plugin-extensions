@@ -1,0 +1,22 @@
+name: Test
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v6
+        
+    - name: Run tests
+      run: |
+        DJANGO_SETTINGS_MODULE=tests.test_project.settings uv run --python ${{ matrix.python-version }} -m django test tests

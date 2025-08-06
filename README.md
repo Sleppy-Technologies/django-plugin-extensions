@@ -23,7 +23,7 @@ No further configuration is needed, refer to [django-extensions documentation](h
 
 ## Development
 
-Install `uv` following [`uv`'s install documentation](https://docs.astral.sh/uv/getting-started/installation/). Install `just` (like if `make` actually intended to be a command runner) with `uv tool install rust-just`.
+Install `uv` following [`uv`'s install documentation](https://docs.astral.sh/uv/getting-started/installation/). Install [`just`](https://just.systems/man/en/introduction.html) with `uv tool install rust-just`.
 
 ### Testing
 

@@ -5,7 +5,7 @@
 [![Tests](https://github.com/Sleppy-Technologies/django-plugin-extensions/workflows/Test/badge.svg)](https://github.com/Sleppy-Technologies/django-plugin-extensions/actions?query=workflow%3ATest)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/Sleppy-Technologies/django-plugin-extensions/blob/main/LICENSE)
 
-{{ cookiecutter.description or "" }}
+Django plugin wrapping django-extensions
 
 ## Installation
 
@@ -23,4 +23,12 @@ No further configuration is needed, refer to [django-extensions documentation](h
 
 ## Development
 
-TODO
+Install `uv` following [`uv`'s install documentation](https://docs.astral.sh/uv/getting-started/installation/). Install `just` (like if `make` actually intended to be a command runner) with `uv tool install rust-just`.
+
+### Testing
+
+`just test`
+
+### Linting
+
+`just lint`

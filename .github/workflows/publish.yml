@@ -19,9 +19,11 @@ jobs:
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@v6
 
+      - name: Install Just
+        uses: extractions/setup-just@v3
+
       - name: Run tests
-        run: |
-          DJANGO_SETTINGS_MODULE=tests.test_project.settings uv run --python ${{ matrix.python-version }} -m django test tests
+        run: just test --python ${{ matrix.python-version }}
 
   deploy:
     runs-on: ubuntu-latest

@@ -12,22 +12,27 @@ jobs:
       matrix:
         python-version: ["3.12", "3.13"]
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Install the latest version of uv
-      uses: astral-sh/setup-uv@v6
-        
-    - name: Run tests
-      run: |
-        DJANGO_SETTINGS_MODULE=tests.test_project.settings uv run --python ${{ matrix.python-version }} -m django test tests
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install Just
+        uses: extractions/setup-just@v3
+
+      - name: Run tests
+        run: just test --python ${{ matrix.python-version }}
 
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Install the latest version of uv
-      uses: astral-sh/setup-uv@v6
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v6
 
-    - name: Run ruff
-      run: uvx ruff check
+      - name: Install Just
+        uses: extractions/setup-just@v3
+
+      - name: Run linting
+        run: just lint

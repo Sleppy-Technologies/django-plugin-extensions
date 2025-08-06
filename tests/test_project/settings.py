@@ -4,7 +4,7 @@ SECRET_KEY = "django-insecure-test-key"
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
-INSTALLED_APPS = []
+INSTALLED_APPS = ["tests.test_app"]
 
 MIDDLEWARE = []
 

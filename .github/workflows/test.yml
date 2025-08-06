@@ -20,3 +20,14 @@ jobs:
     - name: Run tests
       run: |
         DJANGO_SETTINGS_MODULE=tests.test_project.settings uv run --python ${{ matrix.python-version }} -m django test tests
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v6
+
+    - name: Run ruff
+      run: uvx ruff check

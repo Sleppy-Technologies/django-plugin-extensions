@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.10"
 
 [[package]]
@@ -42,7 +42,7 @@ wheels = [
 
 [[package]]
 name = "django-plugin-extensions"
-version = "0.1.0.dev1"
+version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "django" },

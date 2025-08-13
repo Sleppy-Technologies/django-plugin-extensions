@@ -42,7 +42,7 @@ wheels = [
 
 [[package]]
 name = "django-plugin-extensions"
-version = "0.1.1"
+version = "0.1.2"
 source = { editable = "." }
 dependencies = [
     { name = "django" },
@@ -54,7 +54,7 @@ dependencies = [
 requires-dist = [
     { name = "django" },
     { name = "django-extensions", specifier = "==4.*" },
-    { name = "djp" },
+    { name = "djp", specifier = ">=0.3.1" },
 ]
 
 [[package]]
